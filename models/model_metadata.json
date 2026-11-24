@@ -1,0 +1,116 @@
+{
+  "model_name": "XGBoost",
+  "features": [
+    "carat",
+    "cut",
+    "color",
+    "clarity",
+    "depth",
+    "table",
+    "x",
+    "y",
+    "z"
+  ],
+  "category_order": {
+    "cut": [
+      "Fair",
+      "Good",
+      "Very Good",
+      "Premium",
+      "Ideal"
+    ],
+    "color": [
+      "J",
+      "I",
+      "H",
+      "G",
+      "F",
+      "E",
+      "D"
+    ],
+    "clarity": [
+      "I1",
+      "SI2",
+      "SI1",
+      "VS2",
+      "VS1",
+      "VVS2",
+      "VVS1",
+      "IF"
+    ]
+  },
+  "numeric_ranges": {
+    "carat": {
+      "min": 0.2,
+      "max": 5.01,
+      "median": 0.7
+    },
+    "depth": {
+      "min": 43.0,
+      "max": 79.0,
+      "median": 61.8
+    },
+    "table": {
+      "min": 43.0,
+      "max": 95.0,
+      "median": 57.0
+    },
+    "x": {
+      "min": 3.73,
+      "max": 10.74,
+      "median": 5.7
+    },
+    "y": {
+      "min": 3.68,
+      "max": 10.54,
+      "median": 5.71
+    },
+    "z": {
+      "min": 1.07,
+      "max": 6.98,
+      "median": 3.53
+    }
+  },
+  "carat_per_mm3": {
+    "p01": 0.00588560370130118,
+    "p99": 0.0064883448031311745
+  },
+  "price_range": {
+    "min": 326,
+    "max": 18823
+  },
+  "test_metrics": {
+    "r2": 0.983,
+    "mae": 258.5535,
+    "rmse": 514.4576,
+    "mape": 0.0612
+  },
+  "cv_results": [
+    {
+      "model": "XGBoost",
+      "CV R2": 0.9823,
+      "CV MAE ($)": 259.7447,
+      "CV RMSE ($)": 530.9905,
+      "fit time (s)": 2.1165
+    },
+    {
+      "model": "Random Forest",
+      "CV R2": 0.9808,
+      "CV MAE ($)": 271.0357,
+      "CV RMSE ($)": 553.9331,
+      "fit time (s)": 1.9766
+    },
+    {
+      "model": "Linear Regression",
+      "CV R2": 0.9498,
+      "CV MAE ($)": 462.4988,
+      "CV RMSE ($)": 895.5849,
+      "fit time (s)": 0.0594
+    }
+  ],
+  "n_training_rows": 53772,
+  "versions": {
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1"
+  }
+}
